@@ -3,11 +3,12 @@
     ViewData["Title"] = "Employee Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Employees</h1>
-</div>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+
+    <h3 align="center">All Employees</h3>
+
 @{
-    <table>
+        <table align="center">
         <tr>
             <th>Id</th>
             <th>FirstName</th>
@@ -31,9 +32,8 @@
                 <td>@employee.Password</td>
                 <td>@employee.DeptId</td>
                 <td>@employee.ManagerId</td>
-                <td>@Html.ActionLink("Delete","Delete","Employee",new{Id=employee.Id})</td>
-                <td>@Html.ActionLink("Update","Update","Employee",new{Id=employee.Id})</td>
- 
+                <td><button>@Html.ActionLink("Update","Update","Employee",new{Id=employee.Id})</button></td>   
+                <td><button>@Html.ActionLink("Delete","Delete","Employee",new{Id=employee.Id})</button></td>   
             </tr>
         }
     </table>

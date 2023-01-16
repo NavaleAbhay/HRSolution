@@ -4,10 +4,13 @@
     ViewData["Title"] = "Employee Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Showing Employee By id</h1>
-</div>
-<table>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+
+
+    <h3 align="center">Showing Employee Details</h3>
+
+
+<table align="center">
     <tr>
         <th>Id</th>
         <th>FirstName</th>
@@ -29,3 +32,7 @@
             <td>@Model.DeptId</td>
          </tr>
 </table>
+<div style="text-align: center;">
+<button>  <a href="/Employee/ShowAll">Home </a> </button>
+<button>  <a href="/Employee/Search">Back </a> </button>
+ </div>

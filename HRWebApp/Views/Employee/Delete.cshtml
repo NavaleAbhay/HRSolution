@@ -3,15 +3,15 @@
     ViewData["Title"] = "Employee Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Delete Page</h1>
-</div>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+
+    <h3 align="center">Delete Employee</h3>
 
 @using(Html.BeginForm()){
-    <table>
+        <table align="center">
         <tr>
-         <th>@Html.LabelFor(Model=>Model.Id)</th>
-         <td>@Html.DisplayFor(Model=>Model.Id)</td>
+             <th>@Html.LabelFor(Model=>Model.Id)</th>
+             <td>@Html.DisplayFor(Model=>Model.Id)</td>
         </tr>
         <tr>
             <th>@Html.LabelFor(Model=>Model.FirstName)</th>
@@ -43,5 +43,8 @@
         </tr>
 
     </table>
-    <input type="submit" value="Delete"/>
+  <div style="text-align: center;">
+  <button>  <input type="submit" value="Delete"/> </button>
+  <button>  <a href="/Employee/ShowAll">Back </a> </button>
+  </div>
 }

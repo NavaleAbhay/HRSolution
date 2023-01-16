@@ -1,13 +1,18 @@
 @using HRWebApp.Models;
 @{
-    ViewData["Title"] = "Employee Page";
+    ViewData["Title"] = "Search Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Employees</h1>
-</div>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+
 @using(Html.BeginForm()){
-    <label for="Id">Enter Id:</label>
-    <input type="text" name="Id"/>
-    <input type="submit" value="Search"/>
+    <table>
+        <tr>
+            <th>Id</th>
+            <td> <input type="text" name="Id" /> </td>
+            <td><button><input type="submit" value="Search"/> </button> </td>
+        </tr>
+    </table>
+    <div style="text-align: center;" >
+     </div>
 }

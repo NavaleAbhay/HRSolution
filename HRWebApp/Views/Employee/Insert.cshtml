@@ -3,11 +3,12 @@
     ViewData["Title"] = "Employee Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Insert New employee</h1>
-</div>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+  
+    <h3 align="center">Insert  Employee</h3>
+
 @using(Html.BeginForm()){
-    <table>
+    <table align="center">
         <tr>
             <th>@Html.LabelFor(Model=>Model.FirstName)</th>
             <td>@Html.EditorFor(Model => Model.FirstName)</td>
@@ -37,6 +38,8 @@
             <td>@Html.EditorFor(Model => Model.ManagerId)</td>
         </tr>
     </table>
-
-    <input type="submit" value="Insert"/>
+   <div style="text-align: center;">
+  <button>  <input type="submit" value="Insert"/> </button>
+  <button>  <a href="/Employee/ShowAll">Back </a> </button>
+  </div>
 }

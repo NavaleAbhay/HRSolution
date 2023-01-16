@@ -2,12 +2,12 @@
 @{
     ViewData["Title"] = "Update Page";
 }
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
 
-<div class="text-center">
-    <h1 class="display-4">Update Employee</h1>
-</div>
+    <h3 align="center">Update Employee</h3>
+
 @using(Html.BeginForm()){
-    <table>
+    <table align="center">
         <tr>
             <th>@Html.LabelFor(Model=>Model.Id)</th>
             <td>@Html.DisplayFor(Model => Model.Id)</td>
@@ -43,5 +43,9 @@
         </tr>
     </table>
 
-    <input type="submit" value="Update"/>
+    
+  <div style="text-align: center;">
+  <button>  <input type="submit" value="Update"/> </button>
+  <button>  <a href="/Employee/ShowAll">Back </a> </button>
+  </div>
 }
