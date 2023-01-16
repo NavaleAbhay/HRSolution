@@ -1,14 +1,18 @@
 @model HRWebApp.Models.Employee;
 @{
-    ViewData["Title"] = "Employee Page";
+    ViewData["Title"] = "Update Page";
 }
-
    <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
-  
-    <h3 align="center">Insert  Employee</h3>
+
+    <h3 align="center">Update Employee</h3>
 
 @using(Html.BeginForm()){
     <table align="center">
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.Id)</th>
+            <td>@Html.DisplayFor(Model => Model.Id)</td>
+        </tr>
+
         <tr>
             <th>@Html.LabelFor(Model=>Model.FirstName)</th>
             <td>@Html.EditorFor(Model => Model.FirstName)</td>
@@ -38,8 +42,10 @@
             <td>@Html.EditorFor(Model => Model.ManagerId)</td>
         </tr>
     </table>
-   <div style="text-align: center;">
-  <button>  <input type="submit" value="Insert"/> </button>
+
+    
+  <div style="text-align: center;">
+  <button>  <input type="submit" value="Update"/> </button>
   <button>  <a href="/Employee/ShowAll">Back </a> </button>
   </div>
 }

@@ -15,4 +15,6 @@ public class EmployeeService:IEmployeeService{
     public void InsertEmployee(Employee employee)=>_employeerepo.InsertEmployee(employee);
 
     public void DeleteEmployee(int id)=> _employeerepo.DeleteEmployee(id);
+
+    public void UpdateEmployee(Employee employee) => _employeerepo.UpdateEmployee(employee);
 }

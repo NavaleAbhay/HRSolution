@@ -9,6 +9,7 @@ public class CollectionContext : DbContext
 {
     
     public DbSet<Employee> Employees { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         string conString = "server=localhost;port=3306;user=root;password=password;database=transflower";

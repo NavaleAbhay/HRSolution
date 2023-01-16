@@ -58,6 +58,21 @@ public class EmployeeController : Controller
         return RedirectToAction("ShowAll","Employee");
      }
 
+
+     [HttpGet]
+     public IActionResult Update(int id)
+     {
+        var employee=_employeeservice.GetEmployeeById(id);
+        return View(employee);
+     }
+
+     [HttpPost]
+     public IActionResult Update(Employee employee)
+     {
+        _employeeservice.UpdateEmployee(employee);
+        return RedirectToAction("ShowAll","Employee");
+     }
+
      [HttpGet]
      public IActionResult Delete(int id)
      {

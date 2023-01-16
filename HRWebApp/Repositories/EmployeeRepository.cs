@@ -37,6 +37,22 @@ public class EmployeeRepository : IEmployeeRepository
         }
     }
 
+public void UpdateEmployee(Employee employee)
+{
+    using(var context =new CollectionContext())
+    {
+        var emp =context.Employees.Find(employee.Id);
+        emp.Id=employee.Id;
+        emp.FirstName=employee.FirstName;
+        emp.LastName=employee.LastName;
+        emp.Address=employee.Address;
+        emp.Email=employee.Email;
+        emp.Password=employee.Password;
+        emp.DeptId=employee.DeptId;
+        emp.ManagerId=employee.ManagerId;
+        context.SaveChanges();
+    }
+}
     public void DeleteEmployee(int id)
     {
         using(var context= new CollectionContext())
