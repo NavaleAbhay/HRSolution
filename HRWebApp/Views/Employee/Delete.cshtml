@@ -1,0 +1,47 @@
+@model HRWebApp.Models.Employee;
+@{
+    ViewData["Title"] = "Employee Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Delete Page</h1>
+</div>
+
+@using(Html.BeginForm()){
+    <table>
+        <tr>
+         <th>@Html.LabelFor(Model=>Model.Id)</th>
+         <td>@Html.DisplayFor(Model=>Model.Id)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.FirstName)</th>
+            <td>@Html.DisplayFor(Model=>Model.FirstName)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.LastName)</th>
+            <td>@Html.DisplayFor(Model=>Model.LastName)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.Address)</th>
+            <td>@Html.DisplayFor(Model=>Model.Address)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.Email)</th>
+            <td>@Html.DisplayFor(Model=>Model.Email)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.Password)</th>
+            <td>@Html.DisplayFor(Model=>Model.Password)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.DeptId)</th>
+            <td>@Html.DisplayFor(Model=>Model.DeptId)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.ManagerId)</th>
+            <td>@Html.DisplayFor(Model=>Model.ManagerId)</td>
+        </tr>
+
+    </table>
+    <input type="submit" value="Delete"/>
+}

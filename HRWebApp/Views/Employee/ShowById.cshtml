@@ -1,0 +1,31 @@
+@using HRWebApp.Models;
+@model Employee
+@{
+    ViewData["Title"] = "Employee Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Showing Employee By id</h1>
+</div>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>address</th>
+        <th>email</th>
+        <th>password</th>
+        <th>managerId</th>
+        <th>departmentId</th>
+         </tr>
+         <tr>
+            <td>@Model.Id</td>
+            <td>@Model.FirstName</td>
+            <td>@Model.LastName</td>
+            <td>@Model.Address</td>
+            <td>@Model.Email</td>
+            <td>@Model.Password</td>
+            <td>@Model.ManagerId</td>
+            <td>@Model.DeptId</td>
+         </tr>
+</table>

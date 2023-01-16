@@ -9,4 +9,10 @@ public class EmployeeService:IEmployeeService{
         this._employeerepo=employeeRepository;
     }
     public List<Employee> GetAllEmployee()=>_employeerepo.GetAllEmployee();
+
+    public Employee GetEmployeeById(int id)=>_employeerepo.GetEmployeeById(id);
+
+    public void InsertEmployee(Employee employee)=>_employeerepo.InsertEmployee(employee);
+
+    public void DeleteEmployee(int id)=> _employeerepo.DeleteEmployee(id);
 }

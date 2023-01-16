@@ -1,0 +1,42 @@
+@model HRWebApp.Models.Employee;
+@{
+    ViewData["Title"] = "Employee Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Insert New employee</h1>
+</div>
+@using(Html.BeginForm()){
+    <table>
+        <tr>
+            <th>@Html.LabelFor(Model=>Model.FirstName)</th>
+            <td>@Html.EditorFor(Model => Model.FirstName)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.LastName)</th>
+            <td>@Html.EditorFor(Model => Model.LastName)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.Email)</th>
+            <td>@Html.EditorFor(Model => Model.Email)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.Address)</th>
+            <td>@Html.EditorFor(Model => Model.Address)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.Password)</th>
+            <td>@Html.EditorFor(Model => Model.Password)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.DeptId)</th>
+            <td>@Html.EditorFor(Model => Model.DeptId)</td>
+        </tr>
+         <tr>
+            <th>@Html.LabelFor(Model=>Model.ManagerId)</th>
+            <td>@Html.EditorFor(Model => Model.ManagerId)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Insert"/>
+}
